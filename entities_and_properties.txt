@@ -1,0 +1,46 @@
+(1) Entities and Properties
+
+Entities ()
+Properties (---)
+
+Book (ISBN PK)
+--- ISBN
+--- Title
+--- Publisher
+--- Genre
+--- Royalties (%)
+
+Orders (no PKs)
+--- ID 
+--- Book ISBN
+--- Customer ID
+--- Copies
+
+EditorISBNPairs (no PKs)
+--- ISBN
+--- Editor ID
+
+AuthorISBNPairs (no PKs)
+--- Author ID
+--- ISBN
+
+EditorInfo (ID PK)
+--- ID
+--- Name
+
+- AuthorInfo (ID PK)
+--- ID
+--- Name
+
+(2)
+PKs:
+- ISBN
+- Author ID
+- Editor ID
+- Order ID
+
+(3)
+- An ISBN must have at least one author
+- An ISBN can optionally have zero or more editors
+- An Order must contain an ISBN from the book list.
+- Each existing editor and author must have an associated ID.
